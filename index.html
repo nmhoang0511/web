@@ -1,181 +1,324 @@
-<!DOCTYPE html>
-<html lang="vi">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>[ Trang Thông Tin Cá Nhân Của Hoàng ]</title>
-        <link href="/assets/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <meta content="Thông Tin Thanh Toán Của Ngô Minh Hoàng !" property="og:title" />
-        <meta content="http://ngominhhoang.cf/" property="og:url" />
-        <meta content="https://i.imgur.com/18V0uVS.jpeg" property="og:image" />
-        <meta content="website" property="og:type" />
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> Heart </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ 
+    
+  <style>
+  html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #000;
+  display: flex;
+	justify-content: center;
+	align-items: center;
 
-        <link rel="stylesheet" type="text/css" href="/assets/styles/style.css?ver=2.1" />
-    </head>
+}
 
-    <body>
-        <div class="snowflake"><img src="/assets/img/hoamai.svg"/></div>
-        <div class="snowflake"><img src="/assets/img/hoadao.png"/></div>
-        <div class="snowflake"><img src="/assets/img/hoamai.svg"/></div>
-        <div class="snowflake"><img src="/assets/img/hoadao.png"/></div>
-        <div class="snowflake"><img src="/assets/img/hoamai.svg"/></div>
-        <div class="snowflake"><img src="/assets/img/hoadao.png"/></div>
-        <div class="snowflake"><img src="/assets/img/hoamai.svg"/></div>
-        <div class="snowflake"><img src="/assets/img/hoadao.png"/></div>
-        <div class="snowflake"><img src="/assets/img/hoamai.svg"/></div>
+.box {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+}
 
-        <!-- Preloader -->
-        <div class="preloader">
-            <div class="preloader__wrap">
-                <div class="circle-pulse">
-                    <div class="circle-pulse__1"></div>
-                    <div class="circle-pulse__2"></div>
-                </div>
-                <div class="preloader__progress"><span></span></div>
-            </div>
-        </div>
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#pinkboard {
+	position: relative;
+	margin: auto;
+	height: 500px;
+	width: 500px;
+	animation: animate 1.3s infinite;
+}
 
-        <main class="main">
-            <!-- Header Image -->
-            <div class="header-image">
-                <div class="js-parallax" style="background-image: url(/assets/img/profile.jpg);"></div>
-            </div>
+#pinkboard:before, #pinkboard:after {
+	content: '';
+	position: absolute;
+	background: #FF5CA4;
+	width: 100px;
+	height: 160px;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+}
 
-            <div class="container gutter-top">
-                <!-- Header -->
-                <header class="header box">
-                    <div class="header__left">
-                        <div class="header__photo">
-                            <img class="header__photo-img" src="https://i.imgur.com/18V0uVS.jpeg" />
-                        </div>
-                        <div class="header__base-info">
-                            <h2 class="title titl--h1 Ubuntu">
-                                <b>Ngô Minh Hoàng<img src="/assets/img/tich-xanh.png" style="height: 24px;" /></b>
-                            </h2>
-                            <div class="skill-item" style="color: #ef9d64;"><b>Developer - Blogger</b></div>
-                            <ul class="header__social">
-                                <li>
-                                    <a href="https://www.facebook.com/NgoMinhHoang.Support/"><i class="fab fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="//zalo.me/0334306378"><i class="fas fa-phone"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/nmhoang0511/"><i class="fab fa-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header__right">
-                        <ul class="header__contact">
-                            <li><span class="overhead">Email</span>ngominhhoang05112005@gmail.com</li>
-                            <li><span class="overhead">Phone</span>0334306378</li>
-                        </ul>
-                        <ul class="header__contact">
-                            <li><span class="overhead">Website</span>ngominhhoang.ml</li>
-                            <li><span class="overhead">Location</span>Đồng Nai, VietNam</li>
-                        </ul>
-                    </div>
-                </header>
+#pinkboard:before {
+	left: 100px;
+	transform: rotate(-45deg);
+	transform-origin: 0 100%;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+							0 10px 10px rgba(0,0,0,0.22);
+}
 
-                <div class="row sticky-parent">
-                    <!-- Sidebar nav -->
+#pinkboard:after {
+	left: 0;
+	transform: rotate(45deg);
+	transform-origin: 100% 100%;
+}
 
-                    <!-- Content -->
-                    <div class="col-12">
-                        <div class="box box-content">
-                            <!-- What -->
-                            <div class="mt-1">
-                                <h3 class="title title--h2 first-title title__separate">THÔNG TIN THANH TOÁN</h3>
-                                <div class="row">
-                                    <!-- Case Item -->
-                                    <div class="col-12 col-lg-6">
-                                        <div class="case-item">
-                                            <img src="/assets/img/tsr.png" height="55px" />
-                                            <div>
-                                                &nbsp;
-                                                <h4 class="title title--h4">Thẻ Siêu Rẻ</h4>
-                                                <p>
-                                                    <b>Ngô Minh Hoàng</b><br />
-                                                    <b id="tsr">0334306378</b>
-                                                </p>
-                                                <button type="button" class="btn btn-primary btn-copy" onclick="copyToClipboard('#tsr')">COPY</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Case Item -->
-                                    <div class="col-12 col-lg-6">
-                                        <div class="case-item">
-                                            <img src="/assets/img/mbbank.png" height="55px" />
-                                            <div>
-                                                &nbsp;
-                                                <h4 class="title title--h4">MB Bank</h4>
-                                                <p>
-                                                    <b>NGO MINH HOANG</b><br />
-                                                    <b id="mbbank">5555555550511</b>
-                                                </p>
-                                                <button type="button" class="btn btn-primary btn-copy" onclick="copyToClipboard('#mbbank')">COPY</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Case Item -->
-                                    <div class="col-12 col-lg-6">
-                                        <div class="case-item">
-                                            <img src="/assets/img/momo.png" height="55px" />
-                                            <div>
-                                                &nbsp;
-                                                <h4 class="title title--h4">Ví Momo</h4>
-                                                <p>Ngô Minh Hoàng</b><br />
-                                                    <b id="momo">0334306378</b>
-                                                </p>
-                                                <button type="button" class="btn btn-primary btn-copy" onclick="copyToClipboard('#momo')">COPY</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <div class="case-item">
-                                            <img src="/assets/img/pay.png" height="55px" />
-                                            <div>
-                                                &nbsp;
-                                                <h4 class="title title--h4">Zalo Pay</h4>
-                                                <p>
-                                                    <b>Ngô Minh Hoàng</b><br />
-                                                    <b id="pay">0334306378</b>
-                                                </p>
-                                                <button type="button" class="btn btn-primary btn-copy" onclick="copyToClipboard('#pay')">COPY</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Case Item -->
-                                </div>
-                                <center>
-                                    <input type="checkbox" class="checkbox" id="checkbox" value="yes">
-                                    <label for="checkbox" class="label-check">
-                                      <i class="fas fa-moon"></i>
-                                      <i class='fas fa-sun'></i>
-                                      <div class='ball'>
-                                    </label>
-                                </center>
-                            </div>
-
-                        </div>
-
-                        <!-- Footer -->
-                        <footer class="footer">
-                            © 2022 Vận Hành Bởi Ngô Minh Hoàng
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <!-- JavaScripts -->
-        <script src="/assets/js/jquery-3.4.1.min.js"></script>
-        <script src="/assets/js/script.js"></script>
-        <script src="/assets/js/sweetalert2.all.min.js"></script>
-        <script src="/assets/js/plugins.min.js"></script>
-        <script src="/assets/js/common.js"></script>
-    </body>
-</html>
+@keyframes animate {
+	0% {
+		transform: scale(1);
+	}
+	30% {
+		transform: scale(.8);
+	}
+	60% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+  </style>
+ </HEAD>
+ 
+ <BODY>
+   <div class="box">
+      <canvas id="pinkboard"></canvas>
+   </div>
+  <script>
+  /*
+ * Settings
+ */
+var settings = {
+  particles: {
+    length:   2000, // maximum amount of particles
+    duration:   2, // particle duration in sec
+    velocity: 100, // particle velocity in pixels/sec
+    effect: -1.3, // play with this for a nice effect
+    size:      13, // particle size in pixels
+  },
+};
+/*
+ * RequestAnimationFrame polyfill by Erik Möller
+ */
+(function(){var b=0;var c=["ms","moz","webkit","o"];for(var a=0;a<c.length&&!window.requestAnimationFrame;++a){window.requestAnimationFrame=window[c[a]+"RequestAnimationFrame"];window.cancelAnimationFrame=window[c[a]+"CancelAnimationFrame"]||window[c[a]+"CancelRequestAnimationFrame"]}if(!window.requestAnimationFrame){window.requestAnimationFrame=function(h,e){var d=new Date().getTime();var f=Math.max(0,16-(d-b));var g=window.setTimeout(function(){h(d+f)},f);b=d+f;return g}}if(!window.cancelAnimationFrame){window.cancelAnimationFrame=function(d){clearTimeout(d)}}}());
+/*
+ * Point class
+ */
+var Point = (function() {
+  function Point(x, y) {
+    this.x = (typeof x !== 'undefined') ? x : 0;
+    this.y = (typeof y !== 'undefined') ? y : 0;
+  }
+  Point.prototype.clone = function() {
+    return new Point(this.x, this.y);
+  };
+  Point.prototype.length = function(length) {
+    if (typeof length == 'undefined')
+      return Math.sqrt(this.x * this.x + this.y * this.y);
+    this.normalize();
+    this.x *= length;
+    this.y *= length;
+    return this;
+  };
+  Point.prototype.normalize = function() {
+    var length = this.length();
+    this.x /= length;
+    this.y /= length;
+    return this;
+  };
+  return Point;
+})();
+/*
+ * Particle class
+ */
+var Particle = (function() {
+  function Particle() {
+    this.position = new Point();
+    this.velocity = new Point();
+    this.acceleration = new Point();
+    this.age = 0;
+  }
+  Particle.prototype.initialize = function(x, y, dx, dy) {
+    this.position.x = x;
+    this.position.y = y;
+    this.velocity.x = dx;
+    this.velocity.y = dy;
+    this.acceleration.x = dx * settings.particles.effect;
+    this.acceleration.y = dy * settings.particles.effect;
+    this.age = 0;
+  };
+  Particle.prototype.update = function(deltaTime) {
+    this.position.x += this.velocity.x * deltaTime;
+    this.position.y += this.velocity.y * deltaTime;
+    this.velocity.x += this.acceleration.x * deltaTime;
+    this.velocity.y += this.acceleration.y * deltaTime;
+    this.age += deltaTime;
+  };
+  Particle.prototype.draw = function(context, image) {
+    function ease(t) {
+      return (--t) * t * t + 1;
+    }
+    var size = image.width * ease(this.age / settings.particles.duration);
+    context.globalAlpha = 1 - this.age / settings.particles.duration;
+    context.drawImage(image, this.position.x - size / 2, this.position.y - size / 2, size, size);
+  };
+  return Particle;
+})();
+/*
+ * ParticlePool class
+ */
+var ParticlePool = (function() {
+  var particles,
+      firstActive = 0,
+      firstFree   = 0,
+      duration    = settings.particles.duration;
+  
+  function ParticlePool(length) {
+    // create and populate particle pool
+    particles = new Array(length);
+    for (var i = 0; i < particles.length; i++)
+      particles[i] = new Particle();
+  }
+  ParticlePool.prototype.add = function(x, y, dx, dy) {
+    particles[firstFree].initialize(x, y, dx, dy);
+    
+    // handle circular queue
+    firstFree++;
+    if (firstFree   == particles.length) firstFree   = 0;
+    if (firstActive == firstFree       ) firstActive++;
+    if (firstActive == particles.length) firstActive = 0;
+  };
+  ParticlePool.prototype.update = function(deltaTime) {
+    var i;
+    
+    // update active particles
+    if (firstActive < firstFree) {
+      for (i = firstActive; i < firstFree; i++)
+        particles[i].update(deltaTime);
+    }
+    if (firstFree < firstActive) {
+      for (i = firstActive; i < particles.length; i++)
+        particles[i].update(deltaTime);
+      for (i = 0; i < firstFree; i++)
+        particles[i].update(deltaTime);
+    }
+    
+    // remove inactive particles
+    while (particles[firstActive].age >= duration && firstActive != firstFree) {
+      firstActive++;
+      if (firstActive == particles.length) firstActive = 0;
+    }
+    
+    
+  };
+  ParticlePool.prototype.draw = function(context, image) {
+    // draw active particles
+    if (firstActive < firstFree) {
+      for (i = firstActive; i < firstFree; i++)
+        particles[i].draw(context, image);
+    }
+    if (firstFree < firstActive) {
+      for (i = firstActive; i < particles.length; i++)
+        particles[i].draw(context, image);
+      for (i = 0; i < firstFree; i++)
+        particles[i].draw(context, image);
+    }
+  };
+  return ParticlePool;
+})();
+/*
+ * Putting it all together
+ */
+(function(canvas) {
+  var context = canvas.getContext('2d'),
+      particles = new ParticlePool(settings.particles.length),
+      particleRate = settings.particles.length / settings.particles.duration, // particles/sec
+      time;
+  
+  // get point on heart with -PI <= t <= PI
+  function pointOnHeart(t) {
+    return new Point(
+      160 * Math.pow(Math.sin(t), 3),
+      130 * Math.cos(t) - 50 * Math.cos(2 * t) - 20 * Math.cos(3 * t) - 10 * Math.cos(4 * t) + 25
+    );
+  }
+  
+  // creating the particle image using a dummy canvas
+  var image = (function() {
+    var canvas  = document.createElement('canvas'),
+        context = canvas.getContext('2d');
+    canvas.width  = settings.particles.size;
+    canvas.height = settings.particles.size;
+    // helper function to create the path
+    function to(t) {
+      var point = pointOnHeart(t);
+      point.x = settings.particles.size / 2 + point.x * settings.particles.size / 350;
+      point.y = settings.particles.size / 2 - point.y * settings.particles.size / 350;
+      return point;
+    }
+    // create the path
+    context.beginPath();
+    var t = -Math.PI;
+    var point = to(t);
+    context.moveTo(point.x, point.y);
+    while (t < Math.PI) {
+      t += 0.01; // baby steps!
+      point = to(t);
+      context.lineTo(point.x, point.y);
+    }
+    context.closePath();
+    // create the fill
+    context.fillStyle = '#FF5CA4';
+    context.fill();
+    // create the image
+    var image = new Image();
+    image.src = canvas.toDataURL();
+    return image;
+  })();
+  
+  // render that thing!
+  function render() {
+    // next animation frame
+    requestAnimationFrame(render);
+    
+    // update time
+    var newTime   = new Date().getTime() / 1000,
+        deltaTime = newTime - (time || newTime);
+    time = newTime;
+    
+    // clear canvas
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // create new particles
+    var amount = particleRate * deltaTime;
+    for (var i = 0; i < amount; i++) {
+      var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+      var dir = pos.clone().length(settings.particles.velocity);
+      particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
+    }
+    
+    // update and draw particles
+    particles.update(deltaTime);
+    particles.draw(context, image);
+  }
+  
+  // handle (re-)sizing of the canvas
+  function onResize() {
+    canvas.width  = canvas.clientWidth;
+    canvas.height = canvas.clientHeight;
+  }
+  window.onresize = onResize;
+  
+  // delay rendering bootstrap
+  setTimeout(function() {
+    onResize();
+    render();
+  }, 10);
+})(document.getElementById('pinkboard'));
+  </script>
+ </BODY>
+</HTML>
